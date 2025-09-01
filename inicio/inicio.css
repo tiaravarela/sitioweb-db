@@ -1,0 +1,91 @@
+/* inicio.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.header {
+    background-color: #0d47a1;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.contenedor{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+
+.contenedor-logo{
+    align-items: center;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.logo {
+    width: 120px;
+    height: 60px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    align-self: auto;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu-btn {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #1565c0;
+    transition: background-color 0.3s ease;
+}
+
+.menu-btn:hover {
+    background-color: #0d47a1;
+}
+
+.inicio {
+    background-image: url('https://s3-us-west-2.amazonaws.com/my-car-mexico/modelos/2665ce43/fo3.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    padding-left: 50px;
+    align-items: flex-start;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.inicio h1{
+    margin-top: 30px;
+    
+}

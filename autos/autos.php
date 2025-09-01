@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ford - Modelos de Autos</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="autos.css">
 </head>
 <body>
     <!-- Encabezado -->
     <header class="header">
         <div class="contenedor">
             <h1>Ford - Descubre Nuestros Modelos</h1>
+            <nav class="contenedor-logo">
+                <a href="autos.php">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Ford-Motor-Company-Logo.png" alt="Logo Ford" class="logo">
+                </a>
+            </nav>
+            <h1>                       </h1>
         </div>
         <nav class="menu">
-            <a href="index.php" class="menu-btn">Inicio</a>
+            <a href="../index.php" class="menu-btn">Inicio</a>
             <a href="autos.php" class="menu-btn">Vehículos</a>
         </nav>
     </header>
 
     <!-- Sección de Modelos de Autos -->
-    <section class="contenedor autos">
+    <section class="autos">
         <div class="grid-autos">
             <?php
             $cars = [
