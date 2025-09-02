@@ -27,17 +27,20 @@ body {
     flex-direction: row-reverse;
 }
 
+.contenedor h1{
+    margin-left: 50px;
+}
 
 .contenedor-logo{
     align-items: center;
     position: absolute;
     left: 20px;
-    top: 20px;
+    top: 25px;
 }
 
 .logo {
     width: 120px;
-    height: 60px;
+    height: 55px;
 }
 
 .header-container {

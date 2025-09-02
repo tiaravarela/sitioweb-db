@@ -1,6 +1,8 @@
 document.querySelectorAll('.card button').forEach(btn => {
     btn.addEventListener('click', () => {
         const detalles = btn.nextElementSibling;
-        detalles.classList.toggle('oculto');
+        if (detalles) {
+            detalles.classList.toggle('oculto');
+        }
     });
 });

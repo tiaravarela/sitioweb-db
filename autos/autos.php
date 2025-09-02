@@ -16,11 +16,11 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Ford-Motor-Company-Logo.png" alt="Logo Ford" class="logo">
                 </a>
             </nav>
-            <h1>                       </h1>
         </div>
         <nav class="menu">
             <a href="../index.php" class="menu-btn">Inicio</a>
             <a href="autos.php" class="menu-btn">Vehículos</a>
+            <a href="autos/autos.php" class="menu-btn">Usuarios</a>
         </nav>
     </header>
 
@@ -49,7 +49,7 @@
                 [
                     'id'=>'f150',
                     'name'=>'Ford F-150',
-                    'image'=>'https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_1ead3d6a5d54475892fc82ba6959fd8a.webp',
+                    'image'=>'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRORsQxXgLkbMzBtZL0s62fTk_Zrg6lHtcnvo8JGKbHuhc7OkSsjeJTp0cNarr_3EsQQzo&usqp=CAU',
                     'alt'=>'Ford F-150',
                     'motor'=>'3.5L V6 EcoBoost',
                     'potencia'=>'400 HP',
@@ -76,7 +76,7 @@
                 [
                     'id'=>'territory',
                     'name'=>'Ford Territory',
-                    'image'=>'https://www.ford.com.ar/content/ford/ar/es_ar/home/cotizacion/territory/jcr:content/par/splitter/splitter0/image/image.imgs.480.high.jpg/1749847522377.jpg',
+                    'image'=>'https://www.centroamerica.ford.com/content/dam/Ford/website-assets/cca/pa/nameplate/territory/2026/overview/color/ambiente/colorizer/verde/ford-centroamerica-territory-2026-suv-version-ambiente-color-verde.jpg.dam.full.high.jpg/1754628301457.jpg',
                     'alt'=>'Ford Territory Azul Metálico',
                     'motor'=>'2.0L EcoBoost',
                     'potencia'=>'250 HP',
@@ -112,6 +112,6 @@
         </div>
     </section>
 
-    <script src="js/script.js"></script>
+    <script src="autos.js"></script>
 </body>
 </html>

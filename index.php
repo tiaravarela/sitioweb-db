@@ -16,12 +16,12 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Ford-Motor-Company-Logo.png" alt="Logo Ford" class="logo">
                 </a>
             </nav>
-            <h1>                       </h1>
         </div>
         <div class="header-contenedor">
             <nav class="menu">
                 <a href="index.php" class="menu-btn">Inicio</a>
                 <a href="autos/autos.php" class="menu-btn">Vehículos</a>
+                <a href="autos/autos.php" class="menu-btn">Usuarios</a>
             </nav>
         </div>
     </header>
