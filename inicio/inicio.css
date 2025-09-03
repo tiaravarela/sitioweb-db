@@ -1,4 +1,4 @@
-/* inicio.css */
+/* autos.css */
 
 /* Reset básico */
 * {
@@ -20,6 +20,26 @@ body {
     text-align: center;
 }
 
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-btn {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #1565c0;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+}
+
+.menu-btn:hover {
+    background-color: #0d47a1;
+}
+
 .contenedor{
     justify-content: center;
     display: flex;
@@ -27,9 +47,6 @@ body {
     flex-direction: row-reverse;
 }
 
-.contenedor h1{
-    margin-left: 50px;
-}
 
 .contenedor-logo{
     align-items: center;
@@ -43,34 +60,13 @@ body {
     height: 55px;
 }
 
+/* Contenedor del header */
 .header-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center; /* Centra verticalmente */
+    justify-content: space-between; /* Logo a la izquierda, menú a la derecha */
     width: 90%;
     margin: auto;
-    align-self: auto;
-}
-
-
-.menu {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.menu-btn {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 16px;
-    border-radius: 5px;
-    background-color: #1565c0;
-    transition: background-color 0.3s ease;
-}
-
-.menu-btn:hover {
-    background-color: #0d47a1;
 }
 
 .inicio {

@@ -21,14 +21,13 @@
             <nav class="menu">
                 <a href="index.php" class="menu-btn">Inicio</a>
                 <a href="autos/autos.php" class="menu-btn">Vehículos</a>
-                <a href="autos/autos.php" class="menu-btn">Usuarios</a>
             </nav>
         </div>
     </header>
 
     <!-- Hero -->
     <section class="inicio">
-        <h1>consecionaria ford</h1>
+        <h1>concesionaria ford</h1>
     </section>
 </body>
 </html>
