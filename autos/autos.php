@@ -10,19 +10,30 @@ include("../conexion.php");
 </head>
 <body>
 <header class="header">
-    <div class="contenedor">
-        <h1>Ford - Descubre Nuestros Modelos</h1>
-        <nav class="contenedor-logo">
-            <a href="autos.php">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Ford-Motor-Company-Logo.png" alt="Logo Ford" class="logo">
-            </a>
-        </nav>
-    </div>
-    <nav class="menu">
-        <a href="../index.php" class="menu-btn">Inicio</a>
-        <a href="autos.php" class="menu-btn">Vehículos</a>
-    </nav>
-</header>
+        <div class="header-container">
+
+            <!-- Logo -->
+            <div class="contenedor-logo">
+                <a href="index.php">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Ford-Motor-Company-Logo.png"
+                        alt="Logo Ford" class="logo">
+                </a>
+            </div>
+
+            <!-- Título -->
+            <h1 class="titulo-header">Ford - Descubre Nuestros Modelos</h1>
+
+            <!-- Menú -->
+            <nav class="menu">
+                <a href="../index.php" class="menu-btn">Inicio</a>
+                <a href="autos/autos.php" class="menu-btn">Vehículos</a>
+
+                <?php if (isset($_SESSION["rol"]) && $_SESSION["rol"] === "admin"): ?>
+                    <a href="admin/admin.php" class="menu-btn">Panel Admin</a>
+                <?php endif; ?>
+            </nav>
+        </div>
+    </header>
 
 <section class="autos">
     <div class="grid-autos">
