@@ -54,11 +54,11 @@ if (isset($_COOKIE["usuario"]) && !isset($_SESSION["usuario"])) {
                 <?php if (isset($_SESSION["usuario"])): ?>
                     <h3>Hola, <?php echo htmlspecialchars($_SESSION["usuario"]); ?> 👋</h3>
                     <p>Rol: <?php echo htmlspecialchars($_SESSION["rol"]); ?></p>
-                    <a href="logout.php" class="btn btn-sec">Cerrar sesión</a>
+                    <a href="login/logout.php" class="btn btn-sec">Cerrar sesión</a>
                 <?php else: ?>
                     <h3>Tu cuenta</h3>
                     <p>Iniciá sesión o registrate para guardar tus datos.</p>
-                    <a href="login.php" class="btn">Iniciar sesión</a>
+                    <a href="login/login.php" class="btn">Iniciar sesión</a>
                     <a href="registro.php" class="btn btn-sec">Registrarse</a>
                 <?php endif; ?>
             </div>
