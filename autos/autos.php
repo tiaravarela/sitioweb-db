@@ -26,7 +26,7 @@ include("../conexion.php");
             <!-- Menú -->
             <nav class="menu">
                 <a href="../index.php" class="menu-btn">Inicio</a>
-                <a href="autos/autos.php" class="menu-btn">Vehículos</a>
+                <a href="autos.php" class="menu-btn">Vehículos</a>
 
                 <?php if (isset($_SESSION["rol"]) && $_SESSION["rol"] === "admin"): ?>
                     <a href="admin/admin.php" class="menu-btn">Panel Admin</a>
