@@ -18,9 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         setcookie("usuario", $usuario, time() + 86400, "/");
 
         if ($row['rol'] == 'admin') {
-            header("Location: admin.php");
+            header("Location: ../admin/admin.php");
         } else {
-            header("Location: index.php");
+            header("Location: ../index.php");
         }
         exit;
     } else {

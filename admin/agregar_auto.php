@@ -2,25 +2,48 @@
 session_start();
 include("../conexion.php");
 
-if ($_SESSION['rol'] != 'admin') {
-    header("Location: index.php");
+if (!isset($_SESSION['rol']) || $_SESSION['rol'] != 'admin') {
+    header("Location: ../index.php");
     exit;
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nombre = $_POST['nombre'];
+    $modelo = $_POST['modelo'];
+    $motor = $_POST['motor'];
+    $potencia = $_POST['potencia'];
+    $transmision = $_POST['transmision'];
     $precio = $_POST['precio'];
-    $descripcion = $_POST['descripcion'];
+    $imagen = $_POST['imagen'];
 
-    $sql = "INSERT INTO autos (nombre, precio, descripcion) VALUES ('$nombre', '$precio', '$descripcion')";
-    $conn->query($sql);
-    header("Location: admin.php");
+    if (!empty($modelo) && !empty($motor) && !empty($potencia) && !empty($transmision) && !empty($precio)) {
+        $sql = "INSERT INTO autos (modelo, motor, potencia, transmision, precio, imagen)
+                VALUES ('$modelo', '$motor', '$potencia', '$transmision', '$precio', '$imagen')";
+        if ($conn->query($sql)) {
+            header("Location: admin.php");
+            exit;
+        } else {
+            echo "Error al agregar: " . $conn->error;
+        }
+    } else {
+        echo "Por favor completá todos los campos.";
+    }
 }
 ?>
 
+<h2>Agregar Nuevo Auto</h2>
 <form method="POST">
-    <input type="text" name="nombre" placeholder="Nombre" required><br>
-    <input type="number" step="0.01" name="precio" placeholder="Precio" required><br>
-    <textarea name="descripcion" placeholder="Descripción"></textarea><br>
+    <label>Modelo:</label><br>
+    <input type="text" name="modelo" required><br><br>
+    <label>Motor:</label><br>
+    <input type="text" name="motor" required><br><br>
+    <label>Potencia:</label><br>
+    <input type="text" name="potencia" required><br><br>
+    <label>Transmisión:</label><br>
+    <input type="text" name="transmision" required><br><br>
+    <label>Precio:</label><br>
+    <input type="number" step="0.01" name="precio" required><br><br>
+    <label>URL de Imagen:</label><br>
+    <input type="text" name="imagen"><br><br>
     <button type="submit">Guardar</button>
 </form>
+
