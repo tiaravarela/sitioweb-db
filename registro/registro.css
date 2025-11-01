@@ -1,0 +1,96 @@
+/* registro.css */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #0e498d, #1f1795);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal */
+.registro-container {
+    background: #fff;
+    padding: 40px 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+/* Título */
+.registro-container h1 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* Inputs */
+.registro-container input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+.registro-container input:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+/* Grupo de nombre y apellido */
+.form-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* Botón */
+.registro-container button {
+    width: 100%;
+    padding: 12px;
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.registro-container button:hover {
+    background: #4a90e2;
+}
+
+/* Enlace al login */
+.login-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Error */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}

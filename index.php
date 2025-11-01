@@ -59,7 +59,7 @@ if (isset($_COOKIE["usuario"]) && !isset($_SESSION["usuario"])) {
                     <h3>Tu cuenta</h3>
                     <p>Iniciá sesión o registrate para guardar tus datos.</p>
                     <a href="login/login.php" class="btn">Iniciar sesión</a>
-                    <a href="registro.php" class="btn btn-sec">Registrarse</a>
+                    <a href="registro/registro.php" class="btn btn-sec">Registrarse</a>
                 <?php endif; ?>
             </div>
 

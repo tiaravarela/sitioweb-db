@@ -30,18 +30,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <h1>Iniciar sesión</h1>
-    <form method="POST">
-        <input type="text" name="usuario" placeholder="Usuario" required><br>
-        <input type="password" name="clave" placeholder="Contraseña" required><br>
-        <button type="submit">Entrar</button>
-    </form>
-    <?php if(isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
+    <div class="login-container">
+        <h1>Iniciar sesión</h1>
+        <form method="POST">
+            <input type="text" name="usuario" placeholder="Usuario" required>
+            <input type="password" name="clave" placeholder="Contraseña" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <?php if(isset($error)) echo "<p class='error'>$error</p>"; ?>
+
+        <p class="register-link">¿No tenés cuenta? <a href="../registro/registro.php">Registrate</a></p>
+
+    </div>
 </body>
 </html>
