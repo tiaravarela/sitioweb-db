@@ -1,4 +1,5 @@
 DROP DATABASE IF EXISTS concesionaria;
+
 -- 🏁 Crear la base de datos si no existe
 CREATE DATABASE IF NOT EXISTS concesionaria;
 USE concesionaria;
@@ -18,6 +19,22 @@ CREATE TABLE usuarios (
 INSERT INTO usuarios (usuario, clave, rol) VALUES
 ('admin', 'admin123', 'admin'),
 ('cliente1', 'cliente123', 'cliente');
+
+
+-- ==============================
+-- 📋 TABLA: registros
+-- ==============================
+DROP TABLE IF EXISTS registros;
+CREATE TABLE registros (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT NOT NULL,
+    nombre VARCHAR(100) NOT NULL,
+    apellido VARCHAR(100) NOT NULL,
+    fecha_nac DATE NOT NULL,
+    correo VARCHAR(150) NOT NULL UNIQUE,
+    telefono VARCHAR(50) NOT NULL,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id) ON DELETE CASCADE
+);
 
 
 -- ==============================
