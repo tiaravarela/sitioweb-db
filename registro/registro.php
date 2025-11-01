@@ -12,16 +12,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Datos de cuenta
     $usuario = $_POST['usuario'];
-    $clave = password_hash($_POST['clave'], PASSWORD_DEFAULT);
+    $clave = $_POST['clave'];
 
     // 1️⃣ Verificar si el usuario o correo ya existen
-    $verificar = $conn->query("SELECT u.usuario, r.correo 
-                               FROM usuarios u 
-                               LEFT JOIN registros r ON u.id = r.id_usuario 
-                               WHERE u.usuario='$usuario' OR r.correo='$correo'");
+    // 1️⃣ Verificar si el usuario ya existe
+    $verificar = $conn->query("SELECT * FROM usuarios WHERE usuario = '$usuario'");
+
 
     if ($verificar->num_rows > 0) {
-        $error = "El usuario o el correo ya están registrados.";
+        $error = "El usuario ya esta registrado";
     } else {
         // 2️⃣ Insertar primero en usuarios
         $sqlUsuario = "INSERT INTO usuarios (usuario, clave, rol)

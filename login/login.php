@@ -13,8 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($resultado->num_rows > 0) {
         $row = $resultado->fetch_assoc();
 
-        // Verificar la contraseña encriptada
-        if (password_verify($clave, $row['clave'])) {
+        if ($clave == $row['clave']) {
             $_SESSION['usuario'] = $usuario;
             $_SESSION['rol'] = $row['rol'];
 
